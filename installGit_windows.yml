@@ -4,7 +4,6 @@
     tasks: 
       # - name: Determine the Git release package
       #  ansible.windows.win_uri:
-      #    #ansible.builtin.uri:
       #    url: https://api.github.com/git-for-windows/git/releases/latest
       #    method: GET
       #    headers:
