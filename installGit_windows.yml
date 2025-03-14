@@ -1,0 +1,21 @@
+---
+  - name: Install git
+    hosts: windowsMachines
+    tasks: 
+      # - name: Determine the Git release package
+      #  ansible.windows.win_uri:
+      #    url: https://api.github.com/git-for-windows/git/releases/latest
+      #    method: GET
+      #    headers:
+      #      Accept: application/vnd.github+json
+      #      X-GitHub-Api_version: "2022-11-28"
+      #      User-Agent: ansible
+      #    return_content: true
+      #  register: json_response
+
+      - name: Download the Git package
+        ansible.windows.win_get_url:
+        # url: "{{ json_response.json.tarball_url }} "
+          url: https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe
+          dest: C:\temp\git.exe
+
