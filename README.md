@@ -6,6 +6,7 @@ This repository contains my collection of Ansible Playbooks that I'm developing 
 
 
 ## Setting up Ansible within Windows Subsystem for Linux (WSL)
+I've assembled this guide based on material from Jeff Geerling (https://www.youtube.com/watch?v=N7tgLVCXup4&t=2414s) and from the official Ansible documentation.
 
 Follow the instructions at this Microsoft article to guide you through the process - I've extracted the key steps here. 
 
@@ -40,11 +41,11 @@ There are two ways to get Ansible, the first (and method I used is to add Ansibl
 
 You first need to install a software package with:
 
-`sudo apt install software-properties-common`
+`apt install software-properties-common`
 
 Then add Ansible
 
-`sudo apt-add-repository ppa:ansible/ansible`
+`apt-add-repository ppa:ansible/ansible`
 
 Now update the package manager with the latest data with:
 
@@ -52,9 +53,15 @@ Now update the package manager with the latest data with:
 
 The command the installation of Ansible using:
 
-`sudo apt install ansible -y`
+`apt install ansible -y`
 
+Connecting Ansible to Windows
 
+You've got WinRM and SSH as the two main options. This guide covers SSH
+
+## Install Win32-OpenSSH in Windows
+
+Follow this guide: https://github.com/PowerShell/Win32-OpenSSH
 
 
 
