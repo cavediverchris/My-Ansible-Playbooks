@@ -7,3 +7,18 @@
       apt:
         name: git
         state: present
+
+- name: Configure Git
+  hosts: ubuntuMachines
+  tasks:
+    - name: Set username
+      git_config:
+	name: user.name
+	scope: global
+	value: "MyUserName"
+
+    - name: Set email address
+      git_config:
+	name: user.email
+	scope: global
+	value: "MyEmailAddress@Domain.com"

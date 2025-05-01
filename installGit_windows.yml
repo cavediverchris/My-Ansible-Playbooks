@@ -19,3 +19,18 @@
           url: https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe
           dest: C:\temp\git.exe
 
+  - name: Configure Git
+  hosts: ubuntuMachines
+  tasks:
+    - name: Set username
+      git_config:
+	name: user.name
+	scope: global
+	value: "MyUserName"
+
+    - name: Set email address
+      git_config:
+	name: user.email
+	scope: global
+	value: "MyEmailAddress@Domain.com"
+
