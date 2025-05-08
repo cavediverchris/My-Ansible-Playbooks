@@ -55,6 +55,7 @@
 #
 # My Windows Development Rig
 localhost ansible_connection=local
+windowsMachines ansible_connection=winrm
 
 [ubuntuMachines]
 localhost
