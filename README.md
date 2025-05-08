@@ -87,7 +87,8 @@ The following subsections describe each of the playbooks
 
 ## Install Git
 
-The purpose of this is to install the Git version control system on the host. Git is the primary version control system in use, then there is some very limited setup. There are two variants to achieve this: 
+The purpose of this is to install the Git version control system on the host. Git is the primary version control system in use, then there is some very limited setup. For Ubuntu-based clients, the package manager 'apt' is used in order to download and install Git. For Windows-based clients, we use win_get_url in order to download the installer from the internet.
 
-* installGit_ubuntu - this is designed to use "apt" package manager to install the git client on Ubuntu-based machines.
-* installGit_windows - this is designed to download and install the Git for Windows client.
+TODO: Update the windows-part to get the latest version of Git, rather than hardcoded
+
+TODO: Actually get the download working, and then run it.
