@@ -12,8 +12,6 @@ At the moment, I'm using the same physical machine (a Windows-based computer), t
 
 ## 
 
-
-
 ## Setting up Ansible within Windows Subsystem for Linux (WSL)
 
 I've assembled this guide based on material from Jeff Geerling (https://www.youtube.com/watch?v=N7tgLVCXup4&t=2414s) and from the official Ansible documentation.
@@ -46,7 +44,7 @@ You've got WinRM and SSH as the two main options of getting commands from Ansibl
 
 TODO: Follow this guide: [GitHub - PowerShell/Win32-OpenSSH: Win32 port of OpenSSH](https://github.com/PowerShell/Win32-OpenSSH)
 
-
+Although I have also tried to get WinRM working using: [Windows Remote Management &mdash; Ansible Community Documentation](https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html). This involved a lot of port opening.
 
 ## Setting up Ansible within Ubuntu
 
@@ -82,8 +80,6 @@ The command the installation of Ansible using:
 `apt install ansible -y`
 
 If this is for a machine running WSL, then return to the [Setting Up Ansible within Windows using WSL](#Setting-up-Ansible-within-Windows-Subsystem-for-Linux-WSL).
-
-
 
 # About the playbooks
 
