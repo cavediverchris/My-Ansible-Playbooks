@@ -1,0 +1,34 @@
+---
+
+  - name: Install git on Ubuntu Machine(s)
+    hosts: ubuntuMachines
+    tasks: 
+      - name: Install Git
+        apt:
+          name: git
+          state: present
+
+  - name: Install Git on Windows machine(s)
+    hosts: windowsMachines
+    tasks:
+      - name: Download Package from the internet
+        ansible.windows.win_get_url:
+          # url: https://github/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe
+           url: http://www.example.com/earthrise.jpg
+           dest: C:temp\earthrise.jpg
+          # dest: C:\temp\git.exe
+
+  - name: Configure Git
+    hosts: all
+    tasks:
+      - name: Set username
+        git_config:
+          name: user.name
+          scope: global
+          value: "MyUserName"
+
+      - name: Set email address
+        git_config:
+          name: user.email
+          scope: global
+          value: "MyEmailAddress@Domain.com"
