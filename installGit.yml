@@ -15,7 +15,7 @@
         ansible.windows.win_get_url:
           # url: https://github/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe
            url: http://www.example.com/earthrise.jpg
-           dest: C:temp\earthrise.jpg
+           dest: C:\temp\earthrise.jpg
           # dest: C:\temp\git.exe
 
   - name: Configure Git
